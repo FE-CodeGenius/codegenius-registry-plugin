@@ -1,0 +1,1 @@
+# @codegenius/registry-plugin
