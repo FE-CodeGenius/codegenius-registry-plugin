@@ -8,7 +8,7 @@ import {
 } from "code-genius";
 import enquirer from "enquirer";
 
-import { npmRegisters,RegistryOptions } from "./common";
+import { npmRegisters, RegistryOptions } from "./common";
 
 const printCurrentRegistry = async (isBefore = true) => {
   printInfo(`${isBefore ? "当前" : "最新"} NPM 镜像地址（全局）：`);
