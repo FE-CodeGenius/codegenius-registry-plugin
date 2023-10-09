@@ -4,6 +4,25 @@
 
 使用场景: 用于没有安装其他插件且对于切换命令地址不熟悉的情况下切换常见的镜像地址.
 
+## 安装
+
+```bash
+npm i @codegenius/registry-plugin -D
+```
+
+```javascript
+import { defineConfig } from "code-genius";
+import { npmRegistryInstaller } from "@codegenius/registry-plugin";
+
+export default defineConfig({
+  plugins: [
+    npmRegistryInstaller(),
+  ],
+});
+```
+
+## 使用
+
 ### 命令模式
 
 ```bash
@@ -32,7 +51,7 @@ codeg registry --ask
 仅对 `npm config set registry xxx` 包装, 无其它配置.
 
 ```typescript
-import { npmRegistry } from "code-genius";
+import { npmRegistry } from "@codegenius/registry-plugin";
 
 (async () => {
   await npmRegistry("https://registry.npmjs.org/");
