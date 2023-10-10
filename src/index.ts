@@ -60,7 +60,9 @@ const npmRegistry = async (registry: string) => {
 
 const npmRegistryInstaller = () => {
   return {
-    name: "npmRegistryInstaller",
+    name: "registry",
+    describe: "切换 NPM 镜像地址",
+    command: "registry",
     setup: (cli: CAC) => {
       cli
         .command("registry", "切换 NPM 镜像地址")
